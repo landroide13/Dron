@@ -1,0 +1,20 @@
+
+<h1>Our Drons</h1>
+<hr>
+
+<div class="row">
+  <div class="col-sm-6 animated fadeIn fast" *ngFor="let dron of drons; let i = index">
+    <div class="card">
+      <img class="card-img-top" [src]="dron.img" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{dron.name}}</h4>
+        <p class="card-text">{{dron.bio}}</p>
+        <p class="card-text"><strong class="text-muted">{{dron.price}}</strong></p>
+
+        <button (click)="seeDron(i)" class="btn btn-outline-primary btn-success btn-block">See more</button>
+        <!-- <a [routerLink]="['/dron', i]" class="btn btn-outline-primary btn-success btn-block">See more</a> -->
+
+      </div>
+    </div>
+  </div>
+</div>
